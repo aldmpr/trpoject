@@ -1,9 +1,21 @@
 'use strict';
 
-const answers = [];
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-answers[0] = prompt("What is your Name", "");
-answers[1] = prompt("What is your Surname", "");
-answers[2] = prompt("What is your Age", "");
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-console.log(typeof(answers));
+const a = prompt('Один из просмотренных фильмов?', ''),
+      b = +prompt('На сколько оцените его?', ''),
+      c = prompt('Один из просмотренных фильмов?', ''),
+      d = +prompt('На сколько оцените его?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
